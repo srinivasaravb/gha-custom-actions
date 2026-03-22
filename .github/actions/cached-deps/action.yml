@@ -2,8 +2,14 @@ name: 'Get The Cache & Dependencies'
 description: 'A reusable workflow for cache and dependencies compiste actions'
 runs:
   using: composite
+  inputs:
+    caching:
+      description: 'Whether to cache dependencies or not'
+      required: false
+      default: true
   steps:
     - name: Cache dependencies
+      if: inputs.caching == 'true'
       id: cache
       uses: actions/cache@v4
       with:
