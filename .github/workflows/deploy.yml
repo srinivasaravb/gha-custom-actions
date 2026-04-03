@@ -65,10 +65,14 @@ jobs:
       - name: Deploy site
         run: echo "Deploying..."
   information:
-    needs: [lint, test, build, deploy]
+    #needs: [lint, test, build, deploy]
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
+      - name: Install action dependencies
+        run: |
+          cd .github/actions/deploy-s3-javascript
+          npm install
       - name: Run Custom Action
         uses: ./.github/actions/deploy-s3-javascript

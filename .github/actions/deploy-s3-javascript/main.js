@@ -1,11 +1,10 @@
-
 const core = require('@actions/core');
 const github = require('@actions/github');
-const exex = required('@actions/exec');
+const exec = require('@actions/exec');
 
-function run(){
+function run() {
     core.notice('Hello From Custom JavaScript Action !');
-    console.log("Hello World !")
+    console.log("Hello World !");
 }
 
 run();
