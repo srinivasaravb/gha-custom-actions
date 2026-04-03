@@ -72,7 +72,7 @@ jobs:
           region: ap-southeast-2
           dis-folder: ./dist
   information:
-    #needs: [lint, test, build, deploy]
+    needs: [lint, test, build, deploy]
     runs-on: ubuntu-latest
     steps:
       - name: Get code
