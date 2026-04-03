@@ -15,7 +15,7 @@ jobs:
         with:
           caching: false
       - name: Output information
-        run: echo "Cached used: ${{ steps.load-deps.output.used-cache}}"
+        run: echo "Cached used: ${{ steps.load-deps.output.used-cache }}"
       - name: Lint code
         run: npm run lint
   test:
