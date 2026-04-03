@@ -71,7 +71,6 @@ jobs:
           bucket: ${{ secrets.S3_BUCKET_NAME }}
           region: ${{ secrets.S3_BUCKET_REGION }}
           dis-folder: ./dist
-
   information:
     #needs: [lint, test, build, deploy]
     runs-on: ubuntu-latest
