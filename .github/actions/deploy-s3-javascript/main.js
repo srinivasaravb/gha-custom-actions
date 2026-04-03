@@ -4,7 +4,6 @@ const exec = require('@actions/exec');
 
 function run() {
     core.notice('Hello From Custom JavaScript Action !');
-    console.log("Hello World !");
 }
 
 run();
