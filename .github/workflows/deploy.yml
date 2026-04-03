@@ -70,9 +70,5 @@ jobs:
     steps:
       - name: Get code
         uses: actions/checkout@v4
-      - name: Install action dependencies
-        run: |
-          cd .github/actions/deploy-s3-javascript
-          npm install
       - name: Run Custom Action
         uses: ./.github/actions/deploy-s3-javascript
