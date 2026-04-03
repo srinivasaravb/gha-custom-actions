@@ -8,8 +8,6 @@ inputs:
 outputs:
     used-cache:
       description: 'Wheather the cache was use or not'
-      required: false
-      default: 'false'
       value: ${{ steps.install.outputs.cache-hit }}
 runs:
   using: 'composite'
